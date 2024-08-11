@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+
+    <link rel="prefetch" href="./images/circle.png">
+    <link rel="prefetch" href="./images/cross.png">
+
+</head>
+<body>
+    <nav>
+        <h1 class="logo">Games</h1>
+    </nav>
+    <header>
+        <h2 class="game-name">
+            Tic Tac Toe - 3x3
+        </h2>
+    </header>
+    <main>
+        <section class="game-modes">
+            <button class="mode-button mode-selected" id="two-player-mode" value="two-player-mode" onclick="select_game_mode(this)">2 Player</button>
+            <button class="mode-button" id="ai-mode" value="ai-mode" onclick="select_game_mode(this)">Play with AI✨</button>
+        </section>
+        <section>
+            <div class="game-div">
+                <div class="game-unit">
+                    <div class="tic-tac-toe-3x3">
+                        <div  class="box" id="box00" onclick="player_move(this)"><img src="./images/blank.png" id="img00" /></div>
+                        <div  class="box" id="box01" onclick="player_move(this)"><img src="./images/blank.png" id="img01" /></div>
+                        <div  class="box" id="box02" onclick="player_move(this)"><img src="./images/blank.png" id="img02" /></div>
+                        <div  class="box" id="box10" onclick="player_move(this)"><img src="./images/blank.png" id="img10" /></div>
+                        <div  class="box" id="box11" onclick="player_move(this)"><img src="./images/blank.png" id="img11" /></div>
+                        <div  class="box" id="box12" onclick="player_move(this)"><img src="./images/blank.png" id="img12" /></div>
+                        <div  class="box" id="box20" onclick="player_move(this)"><img src="./images/blank.png" id="img20" /></div>
+                        <div  class="box" id="box21" onclick="player_move(this)"><img src="./images/blank.png" id="img21" /></div>
+                        <div  class="box" id="box22" onclick="player_move(this)"><img src="./images/blank.png" id="img22" /></div>
+                    </div>
+                    <div class="game-info-board" id="temp">
+                        <div class="players">
+                            <span class="player-1" id="player-1-name">Player-1</span>
+                            <span class="vs">VS</span>
+                            <span class="player-2" id="player-2-name">Player-2</span>
+                        </div>
+                        <div class="board">
+                            <div class="current-turn" id="live-player-box">
+                                <div class="live-pointer">
+                                    <img src="./images/pointer arrow.png" class="pointer" id="pointer-p1"></img>
+                                    <img src="./images/pointer arrow.png" class="pointer" id="pointer-p2"></img>
+                                </div>
+                                <div class="p1-dot-p2">
+                                    <span class="p1"><span id="p1-name">P1</span><span class="player-symbol">O</span></span>
+                                    <span class="dot"></span>
+                                    <span class="p2"><span id="p2-name">P2</span> <span class="player-symbol">X</span>
+                                </div>
+                                <div class="current-turn-text" id="game-status">
+                                    Current Turn
+                                </div>
+                            </div>
+                            <div class="winner">
+                                <div class="winner-heading">
+                                    WINNER
+                                </div>
+                                <div class="winner-name" id="winner">
+                                    ?
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-button">
+                            <!-- <button class="start-button" onclick="start_game()">
+                                Start
+                            </button> -->
+                            <button class="restart-button" onclick="start_game()">
+                                Restart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="qr-code-sec">
+            <div class="qr-code">
+                <a href="https://htmlpreview.github.io/?https://github.com/DevShah2573/Tic-Tac-Toe/blob/main/Tic%20Tac%20Toe.html">
+                    <img src="./images/TicTacToeByDevShah.png" alt="Scan QR Code To Play">
+                </a>
+                <span>Scan to Play</span>
+            </div>
+            <div class="qr-code">
+                <a href="https://github.com/DevShah2573/Tic-Tac-Toe/blob/main/Tic%20Tac%20Toe.html">
+                    <img src="./images/SourceCodeTicTacToeByDevShah.png" alt="Scan QR Code To Play">
+                </a>
+                <span>Source Code</span>
+            </div>
+        </div>
+        <div>
+            GitHub: <a href="https://github.com/DevShah2573">@DevShah2573</a>
+        </div>
+        <div id="legal-sec">
+            &copy; Copyright 2024
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
